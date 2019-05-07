@@ -45,12 +45,12 @@ export const addTodoAction = (todo) => ({
 	payload: todo
 });
 
-export const toggleTodoActiond = (todoId) => ({
+export const toggleTodoAction = (todoId) => ({
 	type: 'TOGGLE_TODO',
 	payload: todoId
 });
 
-export const deleteTodoActiond = (todoId) => ({
+export const deleteTodoAction = (todoId) => ({
 	type: 'DELETE_TODO',
 	payload: todoId
 });
