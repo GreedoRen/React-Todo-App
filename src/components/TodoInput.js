@@ -5,8 +5,8 @@ import uuid from 'uuid/v4';
 
 export default () => {
 	const [ todo, setTodo ] = useState('');
-    const dispatch = useDispatch()
-    const addTodo = (todo) => dispatch(addTodoAction(todo))
+	const dispatch = useDispatch();
+	const addTodo = (todo) => dispatch(addTodoAction(todo));
 
 	const onChange = (event) => {
 		setTodo(event.target.value);
@@ -23,11 +23,11 @@ export default () => {
 		});
 	};
 	return (
-		<from onSubmit={onSubmit}>
+		<form onSubmit={onSubmit}>
 			<div>
 				<input type='text' name='todo' placeholder='Add a todo' value={todo} onChange={onChange} />
 				<button type='submit'>Add Todo</button>
 			</div>
-		</from>
+		</form>
 	);
 };
