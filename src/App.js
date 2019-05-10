@@ -1,21 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
-import { Provider } from 'react-redux';
-import { store } from './redux';
+export default () => {
+	const [ count, setCount ] = useState(0);
 
-import TodoInput from './components/TodoInput'
-import TodoList from './components/TodoList'
-
-function App() {
 	return (
-		<Provider store={store}>
-			<div className='main'>
-				<TodoInput />
-				<TodoList />
-			</div>
-		</Provider>
+		<div className='App'>
+			<div>count:{count}</div>
+			<button onClick={() => setCount(count + 1)}>+</button>
+		</div>
 	);
-}
-
-export default App;
+};
